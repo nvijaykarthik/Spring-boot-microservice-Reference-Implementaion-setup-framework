@@ -13,7 +13,7 @@ The implementation is based on the blow architecture diagram given by spring.
 6) Spring boot circute breaker using hystrix with dashboard ->
 7) Spring boot distributed tracing using zipkin ->
 8) Spring boot config dashboard using spring admin -> https://github.com/nvijaykarthik/spring-boot-microservice-admin-server
-9) Spring boot client with ribbon(client side load balancer) -> 
+9) Spring boot client with ribbon(client side load balancer) -> https://github.com/nvijaykarthik/spring-boot-microservice-serivce-consumer
 
 
 
