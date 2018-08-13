@@ -21,7 +21,14 @@ Download all the microservice application from repo , this is a starter setup fo
 
 Eureka - service discovery  . this is the master app, where all other microservice will be registered to this,  discovery runs in default port 8761 (donot forget to configure/check the URL in other services) . this should be started 1st
 
+![Eureka Dashboard](https://github.com/nvijaykarthik/Spring-boot-microservice-complete-setup-framework/blob/master/Eureka.JPG)
+
+
 zipkin - distributed tracing , this is to trace the logs from different microservice. start this service 2nd ( donot forget to configure/check the URL in other services) default port is 9411
+
+![Distributed Tracing](https://github.com/nvijaykarthik/Spring-boot-microservice-complete-setup-framework/blob/master/Zipkin-1.JPG)
+<---->
+![Distributed Tracing](https://github.com/nvijaykarthik/Spring-boot-microservice-complete-setup-framework/blob/master/Zipkin-2.JPG)
 
 Config-server , this is to manage the configuration properties for all the microservices, currently it is configured in only spring-boot-microservice-service-one, this access the configuration service from the GIT repo -> https://github.com/nvijaykarthik/spring-boot-microservices-config-data . start this service 3rd
 
@@ -33,3 +40,11 @@ The Microserice is monitored in spring boot admin or Eureka.
 The circute breaker configureation is monitored using the hystrix dashboard. this will give you clear picture of which serives are accessable and using the boot admin or eureka you keep an eye on whether the service is up or not
 
 The complete flow of records/data/service are monitored in the zip kin, distributed tracing , gives the details on where it started and where it gone.
+
+![Hystrix](https://github.com/nvijaykarthik/Spring-boot-microservice-complete-setup-framework/blob/master/hystrixDashoard-1.JPG)
+<---->
+![Hystrix](https://github.com/nvijaykarthik/Spring-boot-microservice-complete-setup-framework/blob/master/hystrixDashoard-2.JPG)
+<---->
+![Hystrix](https://github.com/nvijaykarthik/Spring-boot-microservice-complete-setup-framework/blob/master/hystrixDashoard-3.JPG)
+<---->
+![Spring boot admin](https://github.com/nvijaykarthik/Spring-boot-microservice-complete-setup-framework/blob/master/springboot-admin.JPG)
