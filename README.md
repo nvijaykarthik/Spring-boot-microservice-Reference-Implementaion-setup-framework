@@ -14,3 +14,22 @@ The implementation is based on the blow architecture diagram given by spring.
 7) Spring boot distributed tracing using zipkin -> All applicaiton added with the zipkin server configuration and spring boot starter zipkin ,  https://github.com/nvijaykarthik/spring-boot-microservice-zipkin-server
 8) Spring boot config dashboard using spring admin -> https://github.com/nvijaykarthik/spring-boot-microservice-admin-server
 9) Spring boot client with ribbon(client side load balancer) -> https://github.com/nvijaykarthik/spring-boot-microservice-serivce-consumer
+
+Download all the microservice application from repo , this is a starter setup for microservice
+
+## It includes.
+
+Eureka - service discovery  . this is the master app, where all other microservice will be registered to this,  discovery runs in default port 8761 (donot forget to configure/check the URL in other services) . this should be started 1st
+
+zipkin - distributed tracing , this is to trace the logs from different microservice. start this service 2nd ( donot forget to configure/check the URL in other services) default port is 9411
+
+Config-server , this is to manage the configuration properties for all the microservices, currently it is configured in only spring-boot-microservice-service-one, this access the configuration service from the GIT repo -> https://github.com/nvijaykarthik/spring-boot-microservices-config-data . start this service 3rd
+
+ZUUL - API gateway . this is to load balance or pre-intercept the services, start this service 4th. ( as it linked to eureka , the routing will be automatically handled example : if we want to access the service one , just access http://IP:port(API gateway)/service-one/.  others will be taken care automatically)
+
+then you can start the spring boot admin , hystrix dashboard , service one . 
+
+The Microserice is monitored in spring boot admin or Eureka.
+The circute breaker configureation is monitored using the hystrix dashboard. this will give you clear picture of which serives are accessable and using the boot admin or eureka you keep an eye on whether the service is up or not
+
+The complete flow of records/data/service are monitored in the zip kin, distributed tracing , gives the details on where it started and where it gone.
