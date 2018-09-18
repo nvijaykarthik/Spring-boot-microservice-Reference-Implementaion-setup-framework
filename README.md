@@ -47,4 +47,4 @@ The complete flow of records/data/service are monitored in the zipkin(distribute
 <---->
 ![Hystrix](https://github.com/nvijaykarthik/Spring-boot-microservice-complete-setup-framework/blob/master/hystrixDashoard-3.JPG)
 <---->
-![Spring boot admin](https://github.com/nvijaykarthik/Spring-boot-microservice-complete-setup-framework/blob/master/springboot-admin.JPG)
+![Spring boot admin](https://github.com/nvijaykarthik/Spring-boot-microservice-complete-setup-framework/blob/master/springboot-admin-sc1.JPG)
