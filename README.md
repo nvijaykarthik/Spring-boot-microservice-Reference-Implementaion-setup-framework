@@ -3,7 +3,7 @@
 Initial Basic reference implementation of the Microserivce using springboot .
 The implementation is based on the blow architecture diagram given by spring.
 
-![Reference implementaion microserivce distributed system](https://github.com/nvijaykarthik/Spring-boot-microservice-complete-setup-framework/blob/master/diagram-distributed-systems.svg)
+![Reference implementaion microserivce distributed system](https://raw.githubusercontent.com/nvijaykarthik/Spring-boot-microservice-Reference-Implementaion-setup-framework/master/diagram-distributed-systems.svg)
 
 1) Spring Boot Gateway Service using ZUUL -> https://github.com/nvijaykarthik/spring-boot-microservice-api-gateway
 2) Spring boot Config service using Spring-config -> https://github.com/nvijaykarthik/spring-boot-microservice-config-server
@@ -21,14 +21,14 @@ Download all the microservice application from repo , this is a starter setup fo
 
 Eureka - service discovery  . this is the master app, where all other microservice will be registered to this,  discovery runs in default port 8761 (donot forget to configure/check the URL in other services) . it should be started 1st
 
-![Eureka Dashboard](https://github.com/nvijaykarthik/Spring-boot-microservice-complete-setup-framework/blob/master/Eureka.JPG)
+![Eureka Dashboard](https://github.com/nvijaykarthik/Spring-boot-microservice-complete-setup-framework/master/Eureka.JPG)
 
 
 zipkin - distributed tracing , this is to trace the logs from different microservice. it should be started 2nd ( donot forget to configure/check the URL in other services) default port is 9411
 
-![Distributed Tracing](https://github.com/nvijaykarthik/Spring-boot-microservice-complete-setup-framework/blob/master/Zipkin-1.JPG)
+![Distributed Tracing](https://github.com/nvijaykarthik/Spring-boot-microservice-complete-setup-framework/master/Zipkin-1.JPG)
 <---->
-![Distributed Tracing](https://github.com/nvijaykarthik/Spring-boot-microservice-complete-setup-framework/blob/master/Zipkin-2.JPG)
+![Distributed Tracing](https://github.com/nvijaykarthik/Spring-boot-microservice-complete-setup-framework/master/Zipkin-2.JPG)
 
 Config-server , this is to manage the configuration properties for all the microservices, currently it is configured in only spring-boot-microservice-service-one, it access the configuration service from the GIT repo -> https://github.com/nvijaykarthik/spring-boot-microservices-config-data . start this service 3rd
 
@@ -41,10 +41,10 @@ The circute breaker configuration is monitored using the hystrix dashboard. this
 
 The complete flow of records/data/service are monitored in the zipkin(distributed tracing) , it gives the details on where it started and where it gone.
 
-![Hystrix](https://github.com/nvijaykarthik/Spring-boot-microservice-complete-setup-framework/blob/master/hystrixDashoard-1.JPG)
+![Hystrix](https://github.com/nvijaykarthik/Spring-boot-microservice-complete-setup-framework/blob/hystrixDashoard-1.JPG)
 <---->
-![Hystrix](https://github.com/nvijaykarthik/Spring-boot-microservice-complete-setup-framework/blob/master/hystrixDashoard-2.JPG)
+![Hystrix](https://github.com/nvijaykarthik/Spring-boot-microservice-complete-setup-framework/blob/hystrixDashoard-2.JPG)
 <---->
-![Hystrix](https://github.com/nvijaykarthik/Spring-boot-microservice-complete-setup-framework/blob/master/hystrixDashoard-3.JPG)
+![Hystrix](https://github.com/nvijaykarthik/Spring-boot-microservice-complete-setup-framework/blob/hystrixDashoard-3.JPG)
 <---->
-![Spring boot admin](https://github.com/nvijaykarthik/Spring-boot-microservice-complete-setup-framework/blob/master/springboot-admin-sc1.JPG)
+![Spring boot admin](https://github.com/nvijaykarthik/Spring-boot-microservice-complete-setup-framework/blob/springboot-admin-sc1.JPG)
